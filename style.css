@@ -80,6 +80,7 @@ p {
   height: 4.5rem;
   width: 100%;
   position: fixed;
+  z-index: 1000;
   background-color: #212529;
 }
 
@@ -202,7 +203,7 @@ a:hover {
   gap: 0.5rem;
 }
 
-.icon {
+.box .icon {
   font-size: 5rem;
   background: #ffc800;
   padding: 1.4rem 1.6rem;
@@ -302,4 +303,102 @@ a:hover {
 .project-img:hover .vertical-line {
   top: 50%;
   opacity: 1;
+}
+
+/* === About styles === */
+.about-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.about-section .contianer {
+  width: 960px;
+  height: 1750px;
+}
+
+.contianer .about-title {
+  /* padding: 40px; */
+  text-align: center;
+  margin-top: 6rem;
+  line-height: 3rem;
+}
+
+.timeline {
+  width: 100%;
+}
+
+.timeline .timeline-items {
+  height: 290px;
+  width: 100%;
+  position: relative;
+  margin-top: 4rem;
+}
+
+.timeline-img img,
+.final-timeline {
+  width: 150px;
+  height: 150px;
+  border: 7px solid #e9ecef;
+  border-radius: 50%;
+  position: absolute;
+  left: 420px;
+}
+
+.timeline-content {
+  width: 370px;
+  height: 100%;
+}
+
+.timeline-items::after {
+  content: " ";
+  display: block;
+  background-color: #e9ecef;
+  width: 3px;
+  height: 330px;
+  position: absolute;
+  top: 148px;
+  left: 492px;
+}
+
+.content--1,
+.content--3 {
+  position: absolute;
+  text-align: right;
+  top: -.8rem;
+  left: 1rem;
+}
+
+.content--2,
+.content--4 {
+  position: absolute;
+  top: -.8rem;
+  right: -1rem;
+}
+
+.timeline-text--r {
+  text-align: right;
+}
+
+.timeline-text--l {
+  text-align: left;
+}
+
+.final-timeline {
+  background-color: #ffc800;
+  color: #f8f9fa;
+  text-align: center;
+  border: 7px solid #e9ecef;
+  position: relative;
+  left: 422px;
+  top: 7rem;
+}
+
+.final-timeline span {
+  margin: 0px 4px;
+  font-size: 1.2rem;
+  position: relative;
+  font-weight: 600;
+  top: 3.5rem;
 }
