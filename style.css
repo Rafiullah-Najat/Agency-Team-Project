@@ -489,3 +489,115 @@ svg:hover {
 img:hover {
   cursor: pointer;
 }
+
+/* === contact section styles ===*/
+.contact-section {
+  width: 100%;
+  text-align: center;
+  background-color: #212529;
+  color: #fff;
+  background-image: url(img/map-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 6rem 7rem 5rem;
+  margin: 0px auto;
+}
+
+.contact-section .contact-title {
+  line-height: 3rem;
+}
+
+.contact-section .contact-form {
+  width: 100%;
+  height: 360px;
+  display: flex;
+}
+
+.contact-section .contact-form .left-form {
+  padding-top: 12px;
+  width: 50%;
+}
+.contact-section .contact-form .left-form .input {
+  padding: 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.25rem;
+  height: 70px;
+  margin: 1.5rem 0px;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+.input:active {
+  border: 3px solid #d9aa00;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #d1d4da;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.contact-section .contact-form .right-form {
+  width: 50%;
+  height: 100%;
+  padding: 37px 15px 65px 20px;
+}
+
+.contact-section .contact-form .right-form .message-text {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 10rem;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+}
+
+/* === footer section styles ===*/
+.footer-section {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+}
+
+.footer-section .left-contents {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.1rem;
+}
+
+.footer-section .left-contents p {
+  line-height: 1;
+  color: black;
+  word-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section .right-contents {
+  width: 250px;
+  display: flex;
+  gap: 55px;
+  padding-top: 1.1rem;
+  font-size: 0.8rem;
+}
+
+.footer-icon {
+  margin-top: 0px;
+}
+.link2 {
+  color: #d9aa00;
+}
+
+.footer-section .right-contents .link {
+  color: #212529;
+}
