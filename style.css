@@ -207,8 +207,6 @@ p {
 .section--2 .box {
   height: 400px;
   text-align: center;
-  border-radius: 7px;
-  transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -429,12 +427,12 @@ p {
 }
 
 .team-members {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  display: flex;
   place-items: center;
 }
 
 .team-members .member-content {
+  flex-grow: 1;
   width: 320px;
   text-align: center;
 }
@@ -574,7 +572,6 @@ textarea::placeholder {
 /* === footer section styles ===*/
 .footer-section {
   width: 100%;
-  /* height: 90px; */
   display: flex;
   justify-content: space-around;
   padding-top: 1.5rem;
@@ -615,7 +612,7 @@ textarea::placeholder {
 
 /* === Making Responsive === */
 
-@media (max-width: 880px) {
+@media (max-width: 890px) {
   .container {
     padding-inline: 6rem;
   }
@@ -658,14 +655,24 @@ textarea::placeholder {
     font-size: 4rem;
   }
 
+  .team-section {
+    padding-inline: 2rem;
+  }
+
   .team-members {
-    grid-template-columns: (1fr);
+    grid-template-columns: repeat(1fr);
     gap: 2rem;
   }
 
   .team-about {
     margin-top: 1rem;
-    padding: 2rem 0;
+    padding: 2rem 3rem;
+  }
+
+  .team-members {
+    display: grid;
+    grid-template-rows: repeat(3fr);
+    gap: 2rem;
   }
 
   .team-members .member-content {
@@ -698,7 +705,7 @@ textarea::placeholder {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 830px) {
   h4 {
     font-size: 1.1rem;
   }
@@ -709,6 +716,10 @@ textarea::placeholder {
 
   .services {
     padding-inline: 3rem;
+  }
+
+  .service-about {
+    font-size: 0.8rem;
   }
 
   .timeline-img img,
@@ -740,8 +751,195 @@ textarea::placeholder {
   .company-logo img {
     width: 150px;
   }
-  /* .content--1,
+}
+
+@media (max-width: 780px) {
+  h4 {
+    font-size: 1.6rem;
+  }
+  .container {
+    padding-inline: 3rem;
+  }
+
+  .services {
+    padding-inline: 1rem;
+  }
+
+  .portfolio-sec .projects {
+    padding-inline: 1rem;
+  }
+
+  .timeline-img img,
+  .final-timeline {
+    height: 105px;
+    width: 105px;
+    left: 335px;
+  }
+
+  .timeline-content {
+    width: 250px;
+  }
+
+  .timeline-items::after {
+    top: 105px;
+    left: 385px;
+    height: 320px;
+  }
+
+  .content--2,
+  .content--4 {
+    top: 0;
+    right: 4.5rem;
+  }
+
+  .content--1,
   .content--3 {
-    left: 0;
-  } */
+    top: 0;
+    left: 4rem;
+  }
+
+  .final-timeline span {
+    font-size: 1rem;
+    top: 1.5rem;
+  }
+
+  .team-about {
+    padding-inline: 1rem;
+  }
+
+  .company-logo img {
+    width: 160px;
+  }
+
+  .footer-section {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  .head {
+    height: 600px;
+  }
+
+  .services {
+    padding-inline: 0;
+    padding-bottom: 3rem;
+  }
+
+  .middle-header {
+    width: 440px;
+  }
+
+  .middle-header .wellcome-text {
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+
+  .middle-header .heading-text {
+    font-size: 3.5rem;
+  }
+
+  .services .section--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .section--2 .box {
+    height: 200px;
+  }
+
+  .service-about {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-sec .projects {
+    padding-inline: 0;
+  }
+
+  .projects .project-box img {
+    height: 350px;
+  }
+
+  .project-box .project-img::after {
+    height: 350px;
+  }
+
+  .timeline-img img,
+  .final-timeline {
+    height: 105px;
+    width: 105px;
+    left: 30px;
+  }
+
+  .timeline-content {
+    width: 350px;
+  }
+
+  .timeline-items::after {
+    top: 105px;
+    left: 80px;
+    height: 320px;
+  }
+
+  .content--2,
+  .content--4 {
+    top: 0;
+    left: 160px;
+  }
+
+  .content--1,
+  .content--3 {
+    text-align: left;
+    top: 0;
+    left: 10rem;
+  }
+
+  .timeline-text--r {
+    text-align: left;
+  }
+
+  .final-timeline span {
+    font-size: 1rem;
+    top: 1.2rem;
+  }
+
+  .team-about {
+    padding-inline: 0;
+    font-size: 2rem;
+  }
+
+  .client-section {
+    height: 500px;
+  }
+  .client-section .client-container {
+    padding-block: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .company-logo img {
+    width: 300px;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  .contact-section {
+    padding-inline: 1rem;
+  }
+
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .contact-section .contact-form .left-form {
+    width: 100%;
+  }
+
+  .contact-section .contact-form .right-form {
+    width: 100%;
+    padding-inline: 0;
+  }
 }
