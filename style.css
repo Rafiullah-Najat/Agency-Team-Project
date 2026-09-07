@@ -139,7 +139,7 @@ p {
 }
 
 .active .line--3 {
-  transform: rotate(45deg) translate(-5px, -5px);
+  transform: rotate(45deg) translate(-6px, -6px);
 }
 
 /* === header sectoion styles ===*/
@@ -520,13 +520,31 @@ img:hover {
   width: 100%;
   height: 360px;
   display: flex;
+  padding-top: 12px;
 }
 
-.contact-section .contact-form .left-form {
-  padding-top: 12px;
-  width: 50%;
+.contact-form .form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
 }
-.contact-section .contact-form .left-form .input {
+
+.form .input-container {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.input-container .right-form {
+  flex-grow: 1;
+  padding-top: 1.35rem;
+}
+.input-container .left-form {
+  flex-grow: 1;
+}
+
+.contact-section .contact-form .input {
   padding: 1.25rem;
   font-size: 1rem;
   font-weight: 400;
@@ -542,31 +560,40 @@ img:hover {
   outline: none;
 }
 
-.input:active {
-  border: 3px solid #d9aa00;
-}
-
 input::placeholder,
 textarea::placeholder {
   color: #d1d4da;
   font-size: 1.1rem;
   font-weight: bold;
 }
-.contact-section .contact-form .right-form {
+/* .contact-section .contact-form {
   width: 50%;
   height: 100%;
   padding: 37px 15px 65px 20px;
-}
+} */
 
-.contact-section .contact-form .right-form .message-text {
+.contact-section .contact-form .message-text {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 91%;
   min-height: 10rem;
   border: 1px solid #ced4da;
   appearance: none;
   border-radius: 0.25rem;
   padding: 1.25rem;
+}
+
+.form .send-btn {
+  width: 100%;
+  width: 250px;
+  padding: 1.25rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 /* === footer section styles ===*/
@@ -618,6 +645,7 @@ textarea::placeholder {
   }
   .nav-bar {
     padding-top: 1rem;
+    height: 5rem;
   }
 
   .nav-items {
@@ -653,6 +681,41 @@ textarea::placeholder {
 
   .middle-header .heading-text {
     font-size: 4rem;
+  }
+
+  .services {
+    padding-inline: 3rem;
+  }
+
+  .service-about {
+    font-size: 0.8rem;
+  }
+
+  .timeline-img img,
+  .final-timeline {
+    height: 120px;
+    width: 120px;
+    left: 360px;
+  }
+
+  .timeline-content {
+    width: 330px;
+  }
+
+  .content--2,
+  .content--4 {
+    right: 1rem;
+  }
+
+  .timeline-items::after {
+    top: 120px;
+    left: 420px;
+    height: 350px;
+  }
+
+  .final-timeline span {
+    font-size: 1rem;
+    top: 2rem;
   }
 
   .team-section {
@@ -712,36 +775,6 @@ textarea::placeholder {
 
   .middle-header .heading-text {
     font-size: 3rem;
-  }
-
-  .services {
-    padding-inline: 3rem;
-  }
-
-  .service-about {
-    font-size: 0.8rem;
-  }
-
-  .timeline-img img,
-  .final-timeline {
-    height: 120px;
-    width: 120px;
-    left: 360px;
-  }
-
-  .timeline-content {
-    width: 330px;
-  }
-
-  .timeline-items::after {
-    top: 120px;
-    left: 420px;
-    height: 350px;
-  }
-
-  .final-timeline span {
-    font-size: 1rem;
-    top: 2rem;
   }
 
   .client-section .client-container {
@@ -831,7 +864,7 @@ textarea::placeholder {
   }
 
   .middle-header {
-    width: 440px;
+    width: 100%;
   }
 
   .middle-header .wellcome-text {
@@ -844,11 +877,19 @@ textarea::placeholder {
   }
 
   .services .section--2 {
-    grid-template-columns: 1fr;
+    display: flex;
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+    height: 1000px;
+    padding-inline: 1rem;
   }
 
   .section--2 .box {
-    height: 200px;
+    font-size: 1rem;
+  }
+
+  .box .icon {
+    padding: 1rem 1.2rem;
   }
 
   .service-about {
@@ -865,6 +906,10 @@ textarea::placeholder {
 
   .project-box .project-img::after {
     height: 350px;
+  }
+
+  .contianer .about-title {
+    margin-top: 4rem;
   }
 
   .timeline-img img,
@@ -928,18 +973,22 @@ textarea::placeholder {
 
   .contact-section {
     padding-inline: 1rem;
+    height: 900px;
   }
 
   .contact-form {
     flex-direction: column;
   }
 
-  .contact-section .contact-form .left-form {
+  .contact-section .contact-form {
     width: 100%;
-  }
-
-  .contact-section .contact-form .right-form {
-    width: 100%;
+    flex-direction: column;
+    /* height: 1000px; */
     padding-inline: 0;
+    padding-top: 1rem;
+  }
+  .form .input-container {
+    flex-direction: column;
+    gap: 0;
   }
 }

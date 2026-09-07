@@ -402,23 +402,48 @@
         <h3>Lorem ipsum dolor sit amet consectetur.</h3>
       </section>
       <section class="contact-form">
-        <div class="left-form">
-          <form action="">
-            <input type="text" class="input" placeholder="Your Name *" />
-            <input type="email" class="input" placeholder="Your Email * " />
-            <input type="text" class="input" placeholder="Your Phone *" />
-          </form>
-        </div>
-        <div class="right-form">
-          <textarea
-            name="textarea"
-            id="area"
-            class="message-text"
-            placeholder="Your Message *"
-          ></textarea>
-        </div>
+        <form action="" method="post" class="form">
+          <div class="input-container">
+            <div class="left-form">
+              <input
+                name="name"
+                type="text"
+                class="input"
+                placeholder="Your Name *"
+                required
+              />
+              <input
+                name="email"
+                type="email"
+                class="input"
+                placeholder="Your Email * "
+                required
+              />
+              <input
+                name="phone"
+                type="text"
+                class="input"
+                placeholder="Your Phone *"
+                required
+              />
+            </div>
+            <div class="right-form">
+              <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                class="message-text"
+                placeholder="Your Message *"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-btn">
+            <button type="submit" class="send-btn btn">Send Message</button>
+          </div>
+        </form>
       </section>
-      <button class="send-btn btn">Send Message</button>
     </main>
 
     <!-- footer section -->
