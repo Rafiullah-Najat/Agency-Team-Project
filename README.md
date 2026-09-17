@@ -3,6 +3,9 @@
 A responsive agency/team landing page built with HTML, CSS, and JavaScript. The project includes a navigation bar, hero section, services, portfolio, company timeline, team members, client logos, contact form, and footer.
 ---
 
+Demo: https://rafiullah-najat.github.io/Agency-Team-Project/
+
+---
 ## ✨ Features
 * Navigation Bar
 * Fixed navigation bar
