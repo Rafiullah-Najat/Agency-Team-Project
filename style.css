@@ -790,6 +790,7 @@ textarea::placeholder {
   h4 {
     font-size: 1.6rem;
   }
+
   .container {
     padding-inline: 3rem;
   }
@@ -850,12 +851,43 @@ textarea::placeholder {
 }
 
 @media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
   .container {
     padding-inline: 1.5rem;
   }
 
+  .nav-bar {
+    padding-inline: 2rem;
+    height: 5.5rem;
+  }
+
+  .nav-items {
+    padding-left: 2.5rem;
+    padding-block: 2rem;
+  }
+  .active .line--1 {
+    transform: rotate(-45deg) translate(-4px, 4px);
+  }
+
   .head {
     height: 600px;
+  }
+
+  .middle-header {
+    width: 100%;
+    padding-inline: 1rem;
+    padding-top: 4rem;
   }
 
   .services {
@@ -878,9 +910,9 @@ textarea::placeholder {
 
   .services .section--2 {
     display: flex;
-    /* grid-template-columns: 1fr; */
     flex-direction: column;
     height: 1000px;
+    gap: 1rem;
     padding-inline: 1rem;
   }
 
@@ -916,30 +948,30 @@ textarea::placeholder {
   .final-timeline {
     height: 105px;
     width: 105px;
-    left: 30px;
+    left: 10px;
   }
 
   .timeline-content {
-    width: 350px;
+    width: 300px;
   }
 
   .timeline-items::after {
     top: 105px;
-    left: 80px;
+    left: 60px;
     height: 320px;
   }
 
   .content--2,
   .content--4 {
     top: 0;
-    left: 160px;
+    left: 120px;
   }
 
   .content--1,
   .content--3 {
     text-align: left;
     top: 0;
-    left: 10rem;
+    left: 7.8rem;
   }
 
   .timeline-text--r {
@@ -983,12 +1015,53 @@ textarea::placeholder {
   .contact-section .contact-form {
     width: 100%;
     flex-direction: column;
-    /* height: 1000px; */
     padding-inline: 0;
     padding-top: 1rem;
   }
   .form .input-container {
     flex-direction: column;
     gap: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 0.8rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .nav-items {
+    height: 300px;
+  }
+
+  .middle-header {
+    width: 100%;
+    padding-inline: 1rem;
+    line-height: 2.5rem;
+  }
+
+  .middle-header .wellcome-text {
+    font-size: 1.2rem;
+    line-height: 1rem;
+  }
+
+  .middle-header .heading-text {
+    font-size: 2.5rem;
   }
 }
